@@ -37,7 +37,7 @@ public class SparkTest {
                 .master("local[*]")
                 .config(conf)
                 .getOrCreate();
-        df = sparkSession.read().json("e:/Soft/people.json");
+        df = ( Dataset<Row> )sparkSession.read().json("e:/Soft/people.json");
 
         // 显示DataFrame的内容
         // df.show();
@@ -62,7 +62,7 @@ public class SparkTest {
         // 注册DataFrame为一个SQL的临时视图
         df.createOrReplaceTempView("people");
 
-        Dataset<Row> sqlDF = sparkSession.sql("SELECT * FROM people");
+        Dataset<Row> sqlDF = ( Dataset<Row> )sparkSession.sql("SELECT * FROM people");
         sqlDF.show();
     }
 

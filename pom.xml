@@ -10,6 +10,9 @@
         <module>kafka</module>
         <module>spark</module>
         <module>java8</module>
+        <module>hadoop</module>
+        <module>sparkstreaming</module>
+        <module>sparkML</module>
     </modules>
     <name>yh</name>
    <parent>
@@ -35,6 +38,14 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.14</version>
+            <!--<type>pom</type>-->
+        </dependency>
+
     </dependencies>
 
     <!-- Package as an executable jar -->
